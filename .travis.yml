@@ -1,0 +1,29 @@
+language: node_js
+node_js: stable
+
+cache:
+  directions:
+  - node_modules
+
+install:
+  - npm install
+
+script:
+  - hexo clean
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "cangmean"
+  - git config user.email "cangmean@outlook.com"
+  - git add .
+  - git commit -m "update docs"
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master
+
+branches:
+  only:
+    - hexo
+env:
+  global:
+    - GITHUB_REF: github.com/cangmean/cangmean.github.io.git
