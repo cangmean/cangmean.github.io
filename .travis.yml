@@ -24,6 +24,7 @@ after_script:
 branches:
   only:
     - hexo
+
 env:
   global:
     - GITHUB_REF: github.com/cangmean/cangmean.github.io.git
