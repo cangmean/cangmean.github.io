@@ -17,6 +17,7 @@ menu:
   归档: /archives
   标签: /tags
   分类: /categories
+  关于: /about
 
 # Favicon
 # use my-favicon.ico to avoid duplicate favicon of melody theme
@@ -137,7 +138,7 @@ toc:
   # number: true
 
 post_copyright:
-  enable: true
+  enable: false
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -253,9 +254,10 @@ busuanzi:
 
 # Sidebar Settings
 # ---------------
-#links_title: Links
-#links:
-  #Name: url
+links_title: Links
+links:
+  千雨: http://blog.webzhong.com
+  Molunerfinn: https://molunerfinn.com/
 
 # Follow Me Button
 # follow:
