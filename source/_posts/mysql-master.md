@@ -2,13 +2,16 @@
 title: 基于docker的mysql主从配置
 date: 2018-07-13 11:12:01
 tags: ["mysql", "docker"]
-category: mysql
+category: 后端
 ---
+
 ### 目的
+
 备份数据, 主库挂了从库依然可以访问
 
-### 使用docker生成镜像
-本文默认为已安装docker环境, ubuntu环境
+### 使用 docker 生成镜像
+
+本文默认为已安装 docker 环境, ubuntu 环境
 
 ```bash
 在本机上安装mysql5.7版本
@@ -18,7 +21,7 @@ sudo docker pull mysql:5.7
 mkdir -p mysql/{master,slave}
 ```
 
-然后在master和slave目录中写入配置文件`Dockerfile`和`my.cnf`
+然后在 master 和 slave 目录中写入配置文件`Dockerfile`和`my.cnf`
 
 ```
 # master/Dockerfile和slave/Dockerfile
@@ -36,6 +39,7 @@ server-id=1
 log-bin=mysql-bin
 server-id=2
 ```
+
 分别在目录中执行以下命令生成镜像
 
 <!--more-->
@@ -49,6 +53,7 @@ sudo docker build -t slave/mysql .
 ```
 
 ### 创建并配置容器
+
 创建容器初始化数据库密码
 
 ```bash
@@ -63,13 +68,15 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 b69cb0f6d536        slave/mysql         "docker-entrypoint.s…"   2 hours ago         Up 2 hours          0.0.0.0:3308->3306/tcp   mysql-slave
 310f9101ef10        master/mysql        "docker-entrypoint.s…"   2 hours ago         Up 2 hours          0.0.0.0:3307->3306/tcp   mysql-master
 ```
-写一个查询容器`IP地址`的sh, 把内容复制到.bashrc中
+
+写一个查询容器`IP地址`的 sh, 把内容复制到.bashrc 中
 
 ```
 function docker_ip(){
   sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $1
 }
 ```
+
 查看两个容器服务的`IP地址`, 连接数据库
 
 ```bash
@@ -81,6 +88,7 @@ docker_ip mysql-slave   # 172.17.0.3
 mysql -u root -h 172.17.0.2 -p
 mysql -u root -h 172.17.0.3 -p
 ```
+
 在主库上进行配置
 
 ```
@@ -142,16 +150,18 @@ mysql > show slave status\G;
 mysql > stop slave;
 mysql > 配置...
 mysql > start slave;
-
 ```
-`Slave_IO_Running`和`Slave_SQL_Running`必须是Yes, 如果是No和Connecting 表示连接失败
+
+`Slave_IO_Running`和`Slave_SQL_Running`必须是 Yes, 如果是 No 和 Connecting 表示连接失败
 
 失败原因可能有:
-1. 连接master的IP地址有误
-2. 配置密码错误
-3. mysql_log_pos 有误
+
+1.  连接 master 的 IP 地址有误
+2.  配置密码错误
+3.  mysql_log_pos 有误
 
 ### 测试
+
 在主库创建一个数据库, 在从库上查询
 
 ```
@@ -172,6 +182,6 @@ mysql> show databases;
 ```
 
 ### 参考地址
+
 - https://laravel-china.org/articles/6631/using-docker-to-complete-master-slave-configuration-of-mysql-database
 - https://www.jianshu.com/p/0439206e1f28
-
