@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>css 选择器</title>
+      <link href="/2018/08/03/css-selector/"/>
+      <url>/2018/08/03/css-selector/</url>
+      <content type="html"><![CDATA[<p>css 通过选择器精确定位 HTML 元素。我们可以通过 css 选择器改变 HTML 的样式.<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p><code>div</code>是一个选择器， 紧跟着 css 的声明块， 其中 <code>background-color</code>表示属性， <code>red</code>表示属性的值.</p><a id="more"></a><h3 id="不同种类的选择器"><a href="#不同种类的选择器" class="headerlink" title="不同种类的选择器"></a>不同种类的选择器</h3><p>选择器分为一下几个类别:</p><table><thead><tr><th>选择器</th><th>描述</th></tr></thead><tbody><tr><td>简单选择器</td><td>通过元素类型， <code>class</code>或<code>id</code>匹配元素</td></tr><tr><td>属性选择器</td><td>通过元素属性/属性值匹配元素</td></tr><tr><td>伪类</td><td>匹配处于确定状态的一个或多个元素，比如被鼠标指针悬停的元素</td></tr><tr><td>伪元素</td><td>匹配处于相关的确定位置的一个或多个元素，例如每个段落的第一个字</td></tr><tr><td>组合器</td><td>组合多个选择器</td></tr><tr><td>多重选择器</td><td>将以逗号分隔开的多个选择器放在一个CSS规则下面</td></tr></tbody></table><h4 id="简单选择器"><a href="#简单选择器" class="headerlink" title="简单选择器"></a>简单选择器</h4><p>元素选择器<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/ko058hLu/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe></p><p>类选择器<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/1nvumLdh/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe></p><p>ID选择器<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/cefxsnw2/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe></p><h3 id="参考-本文例子全部来至于MDN"><a href="#参考-本文例子全部来至于MDN" class="headerlink" title="参考 (本文例子全部来至于MDN)"></a>参考 (本文例子全部来至于MDN)</h3><ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors</a></li></ul>]]></content>
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>mysql 常用命令</title>
       <link href="/2018/07/24/mysql-command/"/>
       <url>/2018/07/24/mysql-command/</url>
