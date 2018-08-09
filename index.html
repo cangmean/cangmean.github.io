@@ -8,25 +8,27 @@
     noSupport: '浏览器不支持'
   }
 } </script></head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar"><div class="author-info"><div class="author-info__avatar text-center"><img src="https://avatars2.githubusercontent.com/u/15395115?s=460&amp;v=4"></div><div class="author-info__name text-center">mink</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">10</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">8</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">4</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" href="http://blog.webzhong.com" target="_blank">千雨</a><a class="author-info-links__name text-center" href="https://molunerfinn.com/" target="_blank">Molunerfinn</a></div></div></div><nav class="no-bg" id="nav" style="background-image: url(true)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">mink 小屋</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a><a class="site-page" href="/">主页</a><a class="site-page" href="/archives">归档</a><a class="site-page" href="/tags">标签</a><a class="site-page" href="/categories">分类</a><a class="site-page" href="/about">关于</a></span></div><div id="site-info"><div id="site-title">mink 小屋</div><div id="site-sub-title"></div><div id="site-social-icons"> <a class="social-icon" href="https://github.com/cangmean" target="_blank"><i class="fa fa-github"></i></a><a class="social-icon search"><i class="fa fa-search"></i></a></div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><div class="recent-post-item article-container"><a class="article-title" href="/2018/08/08/http-cache/">HTTP 缓存机制</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-08</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/前端/">前端</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/http/">http</a></span><div class="content"><p>HTTP 缓存机制通过重用已获取的资源，减少网络延迟和资源等待时间来提升 Web 性能。常见的 HTTP 缓存只能存储<code>GET</code>响应，缓存的关键主要包裹 request method 和 URI。</p>
-<h3 id="缓存策略"><a href="#缓存策略" class="headerlink" title="缓存策略"></a>缓存策略</h3><p>对缓存可以分为以下几种</p>
-<ol>
-<li>缓存存储策略</li>
-<li>缓存过期策略</li>
-<li>缓存对比策略</li>
-</ol>
-<h4 id="缓存存储策略"><a href="#缓存存储策略" class="headerlink" title="缓存存储策略"></a>缓存存储策略</h4><blockquote>
-<p>这个策略决定 HTTP 响应内容是否缓存到客户端</p>
-</blockquote>
-<p>对于 Cache-Control 头里 Public, Private, no-cache, max-cache, no-store 都是用来指定响应内容是否可以被客户端缓存的。其中前四个都会缓存到客户端，只有 no-store 不会。(no-cache 缓存到客户端并立即失效)</p>
-<p>设置 Cache-Control: Public 不一定从本地缓存中加载数据，因为客户端无法确定缓存是否有效，所以需要一套判断缓存有效性的策略</p>
-<h4 id="缓存过期策略"><a href="#缓存过期策略" class="headerlink" title="缓存过期策略"></a>缓存过期策略</h4><blockquote>
-<p>这个策略判断缓存是否过期，如果未过期可直接从本地缓存中加载数据</p>
-</blockquote>
-<p>通过响应头中的 Expires 指明的过期时间判断缓存数据是否有效， 如果超过这个时间客户端会重新发起请求</p>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a href="https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=2653578381&idx=1&sn=3f676e2b2e08bcff831c69d31cf51c51&key=dde62796d24517c892043e67f2520e046c13fc0558822ef7ba7fbe8003ddde05e22230fb4ccb2c31133df2a507940c5d4561c7b4f4570969a47cf1388ff57e4bfea70a3810f3fc805e2a5d9aa3192439&ascene=0&uin=MTM4MjU5NzA0MA%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.11.6+build(15G1212)&version=12010110&nettype=WIFI&fontScale=100&pass_ticket=n3plsW%2FV7Vb6O9hKzPNig5MYpXUoJo3tNUNxhJ5Jh6e9AS%2BRXmvJPbIzUeUmL3S2" target="_blank" rel="noopener">腾讯 Bugly</a></li>
-</ul>
-</div><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/08/07/css-margin-collapse/">css 外边距合并</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/前端/">前端</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/前端/css/">css</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/css/">css</a></span><div class="content"><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>当两个块级元素的上外边距和下外边距发生合并为一个外边距，取值为其中的最大值，这是情况叫<strong>外边距合并</strong>或<strong>margin 崩塌 折叠</strong></p>
+<h3 id="缓存相关字段"><a href="#缓存相关字段" class="headerlink" title="缓存相关字段"></a>缓存相关字段</h3><p>HTTP中与缓存相关的头部信息</p>
+<p><strong>通用头部字段</strong></p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache-Contrl</td>
+<td>控制缓存行为</td>
+</tr>
+<tr>
+<td>Progma</td>
+<td>http1.0，现代浏览器默认设置用于兼容</td>
+</tr>
+</tbody>
+</table>
+<p><strong>请求头部字段</strong></p></div><a class="more" href="/2018/08/08/http-cache/#more">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/08/07/css-margin-collapse/">css 外边距合并</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/前端/">前端</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/前端/css/">css</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/css/">css</a></span><div class="content"><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>当两个块级元素的上外边距和下外边距发生合并为一个外边距，取值为其中的最大值，这是情况叫<strong>外边距合并</strong>或<strong>margin 崩塌 折叠</strong></p>
 <h3 id="什么时候发生崩塌"><a href="#什么时候发生崩塌" class="headerlink" title="什么时候发生崩塌"></a>什么时候发生崩塌</h3><blockquote>
 <p>相邻的两个节点的外边距会合并</p>
 </blockquote></div><a class="more" href="/2018/08/07/css-margin-collapse/#more">阅读更多</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2018/08/07/css-box-model/">css 盒模型</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-08-07</time><span class="article-meta"><span class="article-meta__separator">|</span><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/前端/">前端</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox article-meta__icon" aria-hidden="true"></i><a class="article-meta__categories" href="/categories/前端/css/">css</a></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/css/">css</a></span><div class="content"><h3 id="CSS-盒模型"><a href="#CSS-盒模型" class="headerlink" title="CSS 盒模型"></a>CSS 盒模型</h3><p>css 中使用盒模型来描述元素所占空间的内容。分别是内容区域、内边框、边框、外边框。以下是盒模型图：</p>
