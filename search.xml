@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>css 定位属性</title>
+      <link href="/2018/08/10/css-position/"/>
+      <url>/2018/08/10/css-position/</url>
+      <content type="html"><![CDATA[<p>元素的 position 属性使元素在文档布局中进行定位。</p><h3 id="定位属性"><a href="#定位属性" class="headerlink" title="定位属性"></a>定位属性</h3><p>static 属性是 position 的默认属性，另外还有 relative, absolute, fixed, inherit。定义 position 属性以后可以通过 top, left, bottom, right 控制元素在文档中的位置</p><h4 id="static-默认定位"><a href="#static-默认定位" class="headerlink" title="static 默认定位"></a>static 默认定位</h4><p>static 属性是 posistion 的默认属性，元素出现在文档流中 top, left, bottom, right 属性无效</p><h4 id="relative-相对定位"><a href="#relative-相对定位" class="headerlink" title="relative 相对定位"></a>relative 相对定位</h4><p>relative 属性使元素相对自身进行定位， 元素不脱离文档流</p><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/3ao2fytj/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe><p>这个例子中因为红色 div 虽然位置发生了变化，但是没有脱离文档流，因此黄色 div 不会去填补空位。</p><h4 id="absolute-绝对定位"><a href="#absolute-绝对定位" class="headerlink" title="absolute 绝对定位"></a>absolute 绝对定位</h4><p>absolute 根据 position 属性是 static 以外的第一个父节点进行定位，元素脱离文档流<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/08djsf2h/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe></p><p>这个例子中因为红色 div 设置为 absolute 所以脱离了文档流，黄色 div 填补了空白的位置。如果 absolute 找不到定位父元素会一直往上找，直到根节点<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/vo86mb5h/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe><br>我们给灰色 div 设置定位属性以后，红色 div 定位变化为相对灰色 div，而不是根节点</p><h4 id="fixed-固定定位"><a href="#fixed-固定定位" class="headerlink" title="fixed 固定定位"></a>fixed 固定定位</h4><p>fixed 定位是根据 body 进行定位，即使页面滚动，元素位置仍不变<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/mhd8r1pt/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe></p><h3 id="定位点"><a href="#定位点" class="headerlink" title="定位点"></a>定位点</h3><p>left, top, right, bottom 属性会为定位元素(脱离文档流元素)设置定位点和偏移位置。</p><h4 id="左上角"><a href="#左上角" class="headerlink" title="左上角"></a>左上角</h4><p>默认情况下，定位元素位置为左上角， 等于设置了<code>left:0</code> 和 <code>top:0</code><br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/gdkrjo63/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe></p><h4 id="左下角"><a href="#左下角" class="headerlink" title="左下角"></a>左下角</h4><p>这里我们设置了定位元素的位置为左下角，位置向左偏移了 10px<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/sfck6rpd/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe></p>]]></content>
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>HTTP 缓存机制</title>
       <link href="/2018/08/08/http-cache/"/>
       <url>/2018/08/08/http-cache/</url>
