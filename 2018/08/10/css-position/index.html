@@ -11,6 +11,7 @@
 <h3 id="定位属性"><a href="#定位属性" class="headerlink" title="定位属性"></a>定位属性</h3><p>static 属性是 position 的默认属性，另外还有 relative, absolute, fixed, inherit。定义 position 属性以后可以通过 top, left, bottom, right 控制元素在文档中的位置</p>
 <h4 id="static-默认定位"><a href="#static-默认定位" class="headerlink" title="static 默认定位"></a>static 默认定位</h4><p>static 属性是 posistion 的默认属性，元素出现在文档流中 top, left, bottom, right 属性无效</p>
 <h4 id="relative-相对定位"><a href="#relative-相对定位" class="headerlink" title="relative 相对定位"></a>relative 相对定位</h4><p>relative 属性使元素相对自身进行定位， 元素不脱离文档流</p>
+<a id="more"></a>
 <iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/3ao2fytj/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe>
 <p>这个例子中因为红色 div 虽然位置发生了变化，但是没有脱离文档流，因此黄色 div 不会去填补空位。</p>
 <h4 id="absolute-绝对定位"><a href="#absolute-绝对定位" class="headerlink" title="absolute 绝对定位"></a>absolute 绝对定位</h4><p>absolute 根据 position 属性是 static 以外的第一个父节点进行定位，元素脱离文档流<br><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/08djsf2h/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe></p>
