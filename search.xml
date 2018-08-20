@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title>css float 浮动</title>
+      <link href="/2018/08/17/css-float/"/>
+      <url>/2018/08/17/css-float/</url>
+      <content type="html"><![CDATA[<p>在网页布局中除了 position 属性以外最常用的就是 float 属性，使用 float 属性的元素会脱离标准文档流，并根据 float 属性进行左右浮动。</p><h3 id="使用-float-属性"><a href="#使用-float-属性" class="headerlink" title="使用 float 属性"></a>使用 float 属性</h3><p>多个 div 元素根据文档流会呈现层级结构</p><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/fy47djhg/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe><p>当我们给 yellow 设置浮动属性以后，就脱离了文档流 red 填充原有 yellow 所占的位置</p><a id="more"></a><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/5puyk6Lh/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe><p>当我们给 red 也设置浮动属性后，red 紧跟着 yellow</p><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/3r9mdtez/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe><p>我们设置新的 gray 部分，并且设置为行级标签 span，也设置浮动属性</p><iframe scrolling="no" width="100%" height="250px" src="//jsfiddle.net/71ysften/embedded/html,css,result/dark" frameborder="0" allowfullscreen></iframe><p>可以看出当我们给 gray 设置浮动后，gray 变成了块级元素，而且 gray 也没有跟在 yellow 元素后面，因为上一个 red 是在标准流中所以 gray 保证自己的顶部与 red 元素底部对齐</p><h3 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h3><p>很多时候我们为子元素设置浮动后，发现父元素所占空间高度为空，这是因为浮动元素脱离文档流后不占空间所导致的，这时候需要清除浮动</p><p><strong>方法一</strong><br>使用<code>clear:both</code>属性清除浮动</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  ...浮动元素</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear:both"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p><code>clear</code>属性只能影响自身，也就是清楚了 div 两边的浮动，缺点是需要多写一个 div 元素</p><p><strong>方法二</strong><br>父元素设置<code>overflow:auto</code>属性清除浮动</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"overflow: auto;"</span>&gt;</span></span><br><span class="line">  ...浮动元素</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p><code>overflow</code>可以使用<code>auto</code>和<code>hidden</code>来清除浮动</p><p><strong>方法三</strong><br>通过<code>:after</code>伪元素来清除浮动</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>css 定位属性</title>
       <link href="/2018/08/10/css-position/"/>
       <url>/2018/08/10/css-position/</url>
