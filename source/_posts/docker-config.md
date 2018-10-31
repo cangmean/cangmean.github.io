@@ -1,8 +1,11 @@
 ---
 title: docker 安装与配置
 date: 2018-07-16 15:44:30
-tags: ["docker"]
-category: 后端
+tags:
+  - docker
+categories:
+  - 后端
+  - docker
 ---
 
 ### 安装 docker
@@ -10,15 +13,15 @@ category: 后端
 使用官方的配置脚本， 在 centos 上安装 docker
 
 ```bash
-$ curl -fsSL get.docker.com -o get-docker.sh
-$ sh get-docker.sh --mirror Aliyun
+curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh --mirror Aliyun
 ```
 
 ### 启动 docker
 
 ```bash
-$ systemctl enable docker
-$ systemctl start docker
+systemctl enable docker
+systemctl start docker
 ```
 
 ### 测试 docker
@@ -26,7 +29,7 @@ $ systemctl start docker
 通过下载镜像来测试 docker 是否正常运行
 
 ```bash
-$ docker run hello-world
+docker run hello-world
 ```
 
 ### 加速 docker

@@ -85,7 +85,7 @@ fireworks: false
 
 # Analysis
 # ---------------
-baidu_analytics: 
+baidu_analytics:
 
 google_analytics:
 
@@ -115,17 +115,17 @@ cdn:
     anime: /js/third-party/anime.min.js
     jquery: /js/third-party/jquery.min.js
     fancybox: /js/third-party/jquery.fancybox.min.js
-    velocity: /js/third-party/velocity.min.js 
-    velocity-ui: /js/third-party/velocity.ui.min.js 
+    velocity: /js/third-party/velocity.min.js
+    velocity-ui: /js/third-party/velocity.ui.min.js
 
 # Post info settings
 # ---------------
 avatar: https://avatars2.githubusercontent.com/u/15395115?s=460&v=4
 
-top_img: true # false or url of img 
+top_img: true # false or url of img
 
 post_meta:
-  date_type: created # created or updated 
+  date_type: created # created or updated
   categories: true
   tags: true
 
@@ -170,24 +170,24 @@ slide:
 
 # adv:
   # enable: false
-  # info: 
+  # info:
 
 # Share System
 # ---------------
 addThis:
   enable: false
-  #pubid: 
+  #pubid:
 
 # sharejs:
   # enable: false
-  # disabled_sites: 
+  # disabled_sites:
 
 # Comments System
 # ---------------
 disqus:
-  enable: false 
-  #shortname: 
-  #count: 
+  enable: true
+  shortname: imink
+  count: true
 
 # laibili:
   # enable: false
@@ -195,15 +195,15 @@ disqus:
 
 # gitment
   # enable: false
-  # owner: 
-  # repo: 
-  # client_id: 
-  # client_secret: 
+  # owner:
+  # repo:
+  # client_id:
+  # client_secret:
 
 # gitalk:
 #   enable: false
-#   client_id: 
-#   client_secret: 
+#   client_id:
+#   client_secret:
 #   repo:
 #   owner:
 #   admin:
@@ -232,7 +232,7 @@ since: 2018
 
 ICP:
   enable: false
-  #text: 
+  #text:
 
 # busuanzi count for PV / UV in site
 busuanzi:
@@ -257,7 +257,6 @@ busuanzi:
 links_title: Links
 links:
   千雨: http://blog.webzhong.com
-  Molunerfinn: https://molunerfinn.com/
 
 # Follow Me Button
 # follow:

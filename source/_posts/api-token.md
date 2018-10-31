@@ -1,7 +1,7 @@
 ---
-title: Api接口token认证
+title: 基于Token认证的公共Api接口设计
 date: 2018-07-13 11:16:22
-tags: ["api", "token"]
+tags: ['api', 'token']
 ---
 
 公共 API 通过设计 token 和 sign 等方法，保证接口安全.

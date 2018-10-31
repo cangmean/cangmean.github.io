@@ -1,8 +1,11 @@
 ---
 title: 基于docker的mysql主从配置
 date: 2018-07-13 11:12:01
-tags: ["mysql", "docker"]
-category: 后端
+tags:
+  - mysql
+  - docker
+categories:
+  - 后端
 ---
 
 ### 目的
